@@ -515,3 +515,24 @@ form.addEventListener('submit', (e) => {
     error.style.display = 'block';
   }
 });
+
+// LOcalStorage
+
+// set data object
+
+const myName = document.getElementById('name').value;
+const myEmail = document.getElementById('email').value;
+const myComment = document.getElementById('message').value;
+
+let myFormData = [{
+  name : myName ,
+  email : myEmail ,
+  comment: myComment,
+}];
+
+// set information from data
+
+localStorage.setItem(NAME, `${myFormData.name}`);
+localStorage.setItem(EMAIL, `${myFormData.email}`);
+localStorage.setItem(COMMENT, `${myFormData.comment})`;
+
