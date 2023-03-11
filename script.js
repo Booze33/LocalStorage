@@ -510,6 +510,30 @@ const error = document.getElementById('error');
 form.addEventListener('submit', (e) => {
   if (email.value === email.value.toLowerCase()) {
     form.submit();
+
+    // set data object
+
+const myName = document.getElementById('name');
+const myEmail = document.getElementById('email');
+const myComment = document.getElementById('message');
+
+let myFormData = [{
+  name : myName.value ,
+  email : myEmail.value ,
+  comment: myComment.value,
+}];
+
+// set information from data
+
+localStorage.setItem(NAME, `${myFormData.name}`);
+localStorage.setItem(EMAIL, `${myFormData.email}`);
+localStorage.setItem(COMMENT, `${myFormData.comment}`);
+
+myName.appendChild(localStorage.getItem(NAME));
+myEmail.appendChild(localStorage.getItem(EMAIL));
+myComment.appendChild(localStorage.getItem(COMMENT));
+
+
   } else {
     e.preventDefault();
     error.style.display = 'block';
@@ -517,22 +541,4 @@ form.addEventListener('submit', (e) => {
 });
 
 // LOcalStorage
-
-// set data object
-
-const myName = document.getElementById('name').value;
-const myEmail = document.getElementById('email').value;
-const myComment = document.getElementById('message').value;
-
-let myFormData = [{
-  name : myName ,
-  email : myEmail ,
-  comment: myComment,
-}];
-
-// set information from data
-
-localStorage.setItem(NAME, `${myFormData.name}`);
-localStorage.setItem(EMAIL, `${myFormData.email}`);
-localStorage.setItem(COMMENT, `${myFormData.comment})`;
 
