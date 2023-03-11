@@ -522,7 +522,7 @@ form.addEventListener('submit', (e) => {
   }
 
 
-  
+
 
     // set data object
     var myFormData = {
@@ -546,5 +546,3 @@ var myFormData = JSON.parse(localStorage.getItem('myFormData'));
 dame.value = myFormData.name;
 email.value = myFormData.email;
 message.value = myFormData.comment;
-
-
