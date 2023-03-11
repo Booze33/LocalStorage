@@ -521,6 +521,9 @@ form.addEventListener('submit', (e) => {
     return
   }
 
+
+  
+
     // set data object
     var myFormData = {
       name : InputName,
